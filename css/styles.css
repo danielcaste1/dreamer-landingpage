@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #0c0c0b;
+  width: 100%;
+  z-index: 1;
+}
+.header a i {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu .burguer-button label {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  cursor: pointer;
+}
+.header .menu .burguer-button label span {
+  background: #fff;
+  border-radius: 10px;
+  height: 7px;
+  margin: 7px 0;
+  transition: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.header .menu .burguer-button label span:nth-of-type(1) {
+  width: 100%;
+}
+.header .menu .burguer-button label span:nth-of-type(2) {
+  width: 100%;
+}
+.header .menu .burguer-button label span:nth-of-type(3) {
+  width: 100%;
+}
+.header .menu .burguer-button input#burguer-button {
+  display: none;
+}
+.header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(1) {
+  width: 100%;
+  transform: rotate(45deg) translateY(2rem) translateX(1rem);
+}
+.header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(2) {
+  width: 0;
+}
+.header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(3) {
+  width: 100%;
+  transform: rotate(-45deg) translateY(-2rem) translateX(1rem);
+}
+.header .menu .sections {
+  position: absolute;
+  left: 0;
+  background-color: #0c0c0b;
+  width: max-content;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.header .menu .sections ul li {
+  margin: 0 2rem;
+  list-style: none;
+  text-align: end;
+}
+.header .menu .sections ul li a {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header .menu .sections ul li a:hover {
+  color: #e52cd0;
+}
+
+.unactive {
+  transform: translateX(-150%);
+}
+
+.presentation {
+  max-width: 1080px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.presentation__title {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #10100f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.presentation__text {
+  margin: 1rem auto;
+  text-align: justify;
+  font-size: 1.6rem;
+  color: #10100f;
+  font-weight: 500;
+}
+
+.categories {
+  max-width: 1080px;
+  padding: 2rem;
+  margin: 0 auto;
+  border-top: 1px solid #a6a6a6;
+  background-color: #ffffff;
+}
+.categories__title {
+  margin: 3rem auto 1rem;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #10100f;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.categories__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.categories__container .categorie {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-height: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+.categories__container .categorie__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.categories__container .categorie:hover .categorie__title {
+  color: #e52cd0;
+}
+.categories__container .categorie img {
+  width: 100%;
+  object-fit: contain;
+  filter: brightness(50%) grayscale(100%);
+  transition: 0.3s;
+}
+.categories__container .categorie img:hover {
+  transform: scale(1.2);
+  filter: brightness(20%) grayscale(0%);
+}
+.categories__container .categorie img:hover .categorie__title {
+  color: #e52cd0;
+}
+
+.quote {
+  padding: 3rem 5rem;
+  background-color: #10100f;
+}
+.quote__text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #a6a6a6;
+  font-weight: 300;
+  font-style: italic;
+}
+.quote__author {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #a6a6a6;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .categories__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu .sections ul {
+    display: flex;
+    background: #0c0c0b;
+  }
+}
+@media (min-width: 1440px) {
+  .categories__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

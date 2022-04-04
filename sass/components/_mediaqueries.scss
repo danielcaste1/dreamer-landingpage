@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .categories__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu {
+        .sections {
+            ul{
+                display: flex;
+                background: $color-dark;
+            }
+        }
+    }
+    
+}
+@media (min-width: 1440px) {
+    .categories__container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

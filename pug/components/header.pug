@@ -1,0 +1,13 @@
+header.header 
+    .logo: a(href="./index.html"): i(class="fa-solid fa-book-open")
+    .menu  
+        div(class="sections unactive") 
+            ul.sections__list 
+                each link in links 
+                    li.menu__list__item: a(href=link.page)= link.name 
+        .burguer-button 
+            label(for="burguer-button")
+                input#burguer-button(type="checkbox", name="")
+                span  
+                span  
+                span  

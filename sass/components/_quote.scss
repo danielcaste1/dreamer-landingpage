@@ -1,0 +1,13 @@
+.quote{
+    padding: 3rem 5rem;
+    background-color: $color-semidark;
+    &__text{
+        text-align: center;
+        @include quote($color-semilight);
+        
+    }
+    &__author {
+        text-align: center;
+        @include parapraph($color-semilight);
+    }
+}

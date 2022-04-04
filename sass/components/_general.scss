@@ -1,0 +1,36 @@
+//Colores
+$color-dark: #0c0c0b; 
+$color-semidark: #10100f; 
+$color-semilight: #a6a6a6; 
+$color-light: #ffffff; 
+$color-main : #e52cd0;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+@mixin text($size, $color, $weight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+@mixin title($color){
+    @include text(2.4rem, $color, bold);
+    text-transform: uppercase
+}
+@mixin subtitle($color){
+    @include text(2rem, $color, bold);
+    text-transform: uppercase
+}
+@mixin parapraph($color){
+    @include text(1.6rem, $color, 500)
+}
+@mixin quote($color){
+    @include text(1.8rem, $color, 300);
+    font-style: italic;
+}

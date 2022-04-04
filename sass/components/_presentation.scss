@@ -1,0 +1,16 @@
+.presentation {
+    max-width: 1080px;
+    padding: 2rem ;
+    margin: 0 auto;
+    &__title{
+        margin: 1rem auto;
+        text-align: center;
+        @include title($color-semidark);
+        
+    }
+    &__text{
+        margin: 1rem auto;
+        text-align: justify;
+        @include parapraph($color-semidark);
+    }
+}
