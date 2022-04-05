@@ -1,0 +1,37 @@
+.about {
+    background-color: $color-light;
+    width: 100%;
+    
+    &__img__container {
+        position: relative;
+        margin: 0 auto;
+        
+        overflow: hidden;
+        max-height: 400px;
+        width: 100%;
+        background-color: $color-dark;
+        
+        .about__tittle{
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            text-align: center;
+            @include title($color-main);
+
+            
+        }
+        img{
+            filter: grayscale(110%);
+            opacity: 0.1;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__text{
+        padding: 3rem 2rem;
+        @extend .presentation__text;
+    }
+}

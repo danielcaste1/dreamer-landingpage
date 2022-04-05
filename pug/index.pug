@@ -11,13 +11,23 @@ block content
                 a(href="#" class="categorie")
                     img(src="../assets/imgs/"+ categorie.img , alt=categorie.img, class="categorie__img")
                     h3.categorie__title= categorie.name
+    section.about#about
+            .about__img__container
+                img(src="../assets/imgs/migala.jpeg", class="about__img")
+                h2.about__tittle ¿Qué es Soñador?
+            p.about__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quasi, ducimus fuga nulla sapiente excepturi illo odit ea consectetur inventore consequatur quis, eligendi accusantium cumque! Cum doloribus impedit numquam ex optio, quisquam iusto nemo eaque tempora alias repellendus laudantium quas hic autem non unde. Voluptatum iure incidunt, voluptate ex omnis veritatis obcaecati adipisci, dolore aut recusandae facilis quos pariatur provident eos tempore! Neque velit deleniti maiores dicta id, voluptatibus, quis dignissimos cum praesentium necessitatibus cupiditate ut quod, quae totam fugiat cumque quo ipsa! Aliquam enim harum esse obcaecati nostrum ex exercitationem aspernatur nisi consequatur voluptatem. Maxime nesciunt numquam eos quos?
+    section.contact#contact
+        .contact__container
+            each x in contact
+                if x.name == "YouTube"
+                    a(target="_blank" href=x.link): i(class="fa-brands fa-youtube")
+                if x.name == "Instagram"
+                    a(target="_blank" href=x.link): i(class="fa-brands fa-instagram")
+                if x.name == "Facebook"
+                    a(target="_blank" href=x.link): i(class="fa-brands fa-facebook")
+
     section.quote#quote
         p.quote__text "El poeta encenderá la hoguera donde se queme este mundo sombrío"
         p.quote__author Manuel Scorza
-    section.about#about
-            h2.about__tittle ¿Qué es Soñador?
-            img(src="../assets/imgs/borges.jpg", class="about__img")
-            p.about__text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quasi, ducimus fuga nulla sapiente excepturi illo odit ea consectetur inventore consequatur quis, eligendi accusantium cumque! Cum doloribus impedit numquam ex optio, quisquam iusto nemo eaque tempora alias repellendus laudantium quas hic autem non unde. Voluptatum iure incidunt, voluptate ex omnis veritatis obcaecati adipisci, dolore aut recusandae facilis quos pariatur provident eos tempore! Neque velit deleniti maiores dicta id, voluptatibus, quis dignissimos cum praesentium necessitatibus cupiditate ut quod, quae totam fugiat cumque quo ipsa! Aliquam enim harum esse obcaecati nostrum ex exercitationem aspernatur nisi consequatur voluptatem. Maxime nesciunt numquam eos quos?
-            
         
 

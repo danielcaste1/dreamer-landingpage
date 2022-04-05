@@ -1,0 +1,27 @@
+.contact {
+    background: $color-main;
+    width: 100%;
+    &__container{
+        display: flex;
+        justify-content: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 2rem;
+            background-color: $color-light;
+            padding: 1rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            text-decoration: none;
+            @include title($color-dark);
+            i{
+                transition: 1s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            }
+            &:hover > i{
+                transform: scale(1.5) rotateZ(360deg);
+            }
+        }
+    }
+}

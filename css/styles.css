@@ -15,7 +15,8 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 3rem;
+  height: max-content;
   background-color: #0c0c0b;
   width: 100%;
   z-index: 1;
@@ -33,38 +34,38 @@ html {
 .header .menu .burguer-button label {
   display: flex;
   flex-direction: column;
-  width: 7rem;
+  width: 5rem;
   cursor: pointer;
 }
 .header .menu .burguer-button label span {
   background: #fff;
   border-radius: 10px;
   height: 7px;
-  margin: 7px 0;
+  margin: 1px 0;
   transition: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .header .menu .burguer-button label span:nth-of-type(1) {
-  width: 100%;
+  width: 75%;
 }
 .header .menu .burguer-button label span:nth-of-type(2) {
-  width: 100%;
+  width: 75%;
 }
 .header .menu .burguer-button label span:nth-of-type(3) {
-  width: 100%;
+  width: 75%;
 }
 .header .menu .burguer-button input#burguer-button {
   display: none;
 }
 .header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(1) {
   width: 100%;
-  transform: rotate(45deg) translateY(2rem) translateX(1rem);
+  transform: rotate(45deg) translateY(1.2rem);
 }
 .header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(2) {
   width: 0;
 }
 .header .menu .burguer-button input#burguer-button:checked ~ span:nth-of-type(3) {
   width: 100%;
-  transform: rotate(-45deg) translateY(-2rem) translateX(1rem);
+  transform: rotate(-45deg) translateY(-1.2rem);
 }
 .header .menu .sections {
   position: absolute;
@@ -106,7 +107,7 @@ html {
   font-weight: bold;
   text-transform: uppercase;
 }
-.presentation__text {
+.presentation__text, .about__text {
   margin: 1rem auto;
   text-align: justify;
   font-size: 1.6rem;
@@ -191,6 +192,71 @@ html {
   font-size: 1.6rem;
   color: #a6a6a6;
   font-weight: 500;
+}
+
+.about {
+  background-color: #ffffff;
+  width: 100%;
+}
+.about__img__container {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  max-height: 400px;
+  width: 100%;
+  background-color: #0c0c0b;
+}
+.about__img__container .about__tittle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #e52cd0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.about__img__container img {
+  filter: grayscale(110%);
+  opacity: 0.1;
+  width: 100%;
+  object-fit: contain;
+}
+.about__text {
+  padding: 3rem 2rem;
+}
+
+.contact {
+  background: #e52cd0;
+  width: 100%;
+}
+.contact__container {
+  display: flex;
+  justify-content: center;
+}
+.contact__container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 2rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #0c0c0b;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.contact__container a i {
+  transition: 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.contact__container a:hover > i {
+  transform: scale(1.5) rotateZ(360deg);
 }
 
 @media (min-width: 768px) {
