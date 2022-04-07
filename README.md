@@ -1,5 +1,5 @@
 # Soñador
-Este proyecto es una página web de ejemplo para una página que recopila textos literarios en español, esta inspirada en el sitio web de migala.mx.
+Este proyecto es una página web de ejemplo para una página que recopila textos literarios en español, esta inspirada en el sitio web de https://migala.mx 
 
 
 ## Tecnologías usadas
